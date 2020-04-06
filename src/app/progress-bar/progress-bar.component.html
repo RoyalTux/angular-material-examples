@@ -1,6 +1,18 @@
 <h2 mat-dialog-title>Progress bar example</h2>
 <mat-dialog-content class="mat-typography">
-
+  <h5>The progress-bar supports four modes: determinate, indeterminate, buffer and query.</h5>
+  <h3>Determinate</h3>
+  <h5>Operations where the percentage of the operation complete is known should use the determinate indicator.</h5>
+  <mat-progress-bar mode="determinate" value="80"></mat-progress-bar>
+  <h3>Indeterminate</h3>
+  <h5>Operations where the user is asked to wait while something finishes and it’s not necessary to indicate how long it will take should use the indeterminate indicator.</h5>
+  <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+  <h3>Buffer</h3>
+  <h5>Operations where the user wants to indicate some activity or loading from the server, use the buffer indicator.</h5>
+  <mat-progress-bar mode="buffer"></mat-progress-bar>
+  <h3>Query</h3>
+  <h5>For situations where the user wants to indicate pre-loading (until the loading can actually be made), use the query indicator.</h5>
+  <mat-progress-bar mode="query"></mat-progress-bar>
 </mat-dialog-content>
 <mat-dialog-actions align="end">
   <button mat-button mat-dialog-close>OK</button>

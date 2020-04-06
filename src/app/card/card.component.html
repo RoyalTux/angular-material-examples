@@ -1,0 +1,28 @@
+<h2 mat-dialog-title>Card example</h2>
+<mat-dialog-content class="mat-typography">
+  <mat-card>
+    <mat-card-title>Card title</mat-card-title>
+    <mat-card-subtitle>Card subtitle</mat-card-subtitle>
+    <img mat-card-avatar src="https://www.iconspng.com/images/awesome-tux/awesome-tux.jpg">
+    <mat-card-content>Cadr content</mat-card-content>
+    <img mat-card-image src="https://icons.iconarchive.com/icons/papirus-team/papirus-apps/256/tux-icon.png">
+    <mat-card-actions align="start">
+      <button mat-raised-button (click)="openSnackBar('Container for buttons at the top of the card', 'OK')">😀</button>
+    </mat-card-actions>
+    <mat-divider></mat-divider>
+    <mat-card-actions align="end">
+      <button mat-raised-button (click)="openSnackBar('Container for buttons at the bottom of the card', 'OK')">😀</button>
+    </mat-card-actions>
+    <mat-card-title-group>
+      <mat-card-title>Title group (title)</mat-card-title>
+      <mat-card-subtitle>Title group (subtitle)</mat-card-subtitle>
+      <img mat-card-sm-image src="https://icons.iconarchive.com/icons/mathijssen/tuxlets/256/Purple-Tux-icon.png">
+      <img mat-card-md-image src="https://icons.iconarchive.com/icons/mathijssen/tuxlets/256/Purple-Tux-icon.png">
+      <img mat-card-lg-image src="https://icons.iconarchive.com/icons/mathijssen/tuxlets/256/Purple-Tux-icon.png">
+    </mat-card-title-group>
+    <mat-card-footer>Card footer</mat-card-footer>
+  </mat-card>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>OK</button>
+</mat-dialog-actions>

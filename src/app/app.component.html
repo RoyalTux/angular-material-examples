@@ -1,0 +1,19 @@
+<mat-accordion>
+  <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Angular material examples
+      </mat-panel-title>
+      <mat-panel-description>
+        {{panelOpenState ? 'click to hide' : 'click to open'}} the examples list
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <button mat-raised-button (click)="openExampleDialog('autocomplete')">autocomplete example</button>
+    <button mat-raised-button (click)="openExampleDialog('card')">card example</button>
+    <button mat-raised-button (click)="openExampleDialog('chips')">chips example</button>
+    <button mat-raised-button (click)="openExampleDialog('date-picker')">date picker example</button>
+    <button mat-raised-button (click)="openExampleDialog('expansion-panel')">expansion panel example</button>
+    <button mat-raised-button (click)="openExampleDialog('progress-bar')">progress bar example</button>
+    <button mat-raised-button (click)="openExampleDialog('tabs')">tabs example</button>
+  </mat-expansion-panel>
+</mat-accordion>

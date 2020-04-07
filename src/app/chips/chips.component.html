@@ -1,6 +1,36 @@
 <h2 mat-dialog-title>Chips example</h2>
 <mat-dialog-content class="mat-typography">
-
+  <mat-chip-list aria-label="Fish selection">
+    <mat-chip>Car</mat-chip>
+    <mat-chip>Bike</mat-chip>
+    <mat-chip color="primary" selected>Moto bike</mat-chip>
+    <mat-chip color="accent" selected>Ship</mat-chip>
+  </mat-chip-list>
+  <mat-form-field>
+    <mat-chip-list #chipList aria-label="Car selection">
+      <mat-chip
+        *ngFor="let car of cars"
+        [selectable]="selectable"
+        [removable]="removable"
+        (removed)="remove(car)">
+        {{car}}
+        <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+      </mat-chip>
+      <input
+        placeholder="New car mark..."
+        #carInput
+        [formControl]="carControl"
+        [matAutocomplete]="auto"
+        [matChipInputFor]="chipList"
+        [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+        (matChipInputTokenEnd)="add($event)">
+    </mat-chip-list>
+    <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
+      <mat-option *ngFor="let car of filteredCars | async" [value]="car">
+        {{car}}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
 </mat-dialog-content>
 <mat-dialog-actions align="end">
   <button mat-button mat-dialog-close>OK</button>

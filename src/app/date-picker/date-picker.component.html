@@ -1,6 +1,79 @@
 <h2 mat-dialog-title>Date picker example</h2>
 <mat-dialog-content class="mat-typography">
-
+  <mat-form-field>
+    <mat-label>Basic datepicker</mat-label>
+    <input matInput [matDatepicker]="simplePicker">
+    <mat-datepicker-toggle matSuffix [for]="simplePicker"></mat-datepicker-toggle>
+    <mat-datepicker #simplePicker></mat-datepicker>
+  </mat-form-field>
+    <mat-form-field>
+    <mat-label>Datepicker with custom icon</mat-label>
+    <input matInput [matDatepicker]="customIconPicker">
+    <mat-datepicker-toggle matSuffix [for]="customIconPicker">
+      <mat-icon matDatepickerToggleIcon>📅</mat-icon>
+    </mat-datepicker-toggle>
+    <mat-datepicker #customIconPicker></mat-datepicker>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Datepicker start date</mat-label>
+    <input matInput [matDatepicker]="startDatePicker">
+    <mat-datepicker-toggle matSuffix [for]="startDatePicker"></mat-datepicker-toggle>
+    <mat-datepicker #startDatePicker startView="year" [startAt]="startDate"></mat-datepicker>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Datepicker with min & max validation</mat-label>
+    <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="minMaxPicker">
+    <mat-datepicker-toggle matSuffix [for]="minMaxPicker"></mat-datepicker-toggle>
+    <mat-datepicker #minMaxPicker></mat-datepicker>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Datepicker with filter validation</mat-label>
+    <input matInput [matDatepickerFilter]="myFilter" [matDatepicker]="filterPicker">
+    <mat-datepicker-toggle matSuffix [for]="filterPicker"></mat-datepicker-toggle>
+    <mat-datepicker #filterPicker></mat-datepicker>
+  </mat-form-field>
+  <h3>Disabled datepicker</h3>
+  <p>
+    <mat-form-field>
+      <mat-label>Completely disabled</mat-label>
+      <input matInput [matDatepicker]="dp1" disabled>
+      <mat-datepicker-toggle matSuffix [for]="dp1"></mat-datepicker-toggle>
+      <mat-datepicker #dp1></mat-datepicker>
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field>
+      <mat-label>Popup disabled</mat-label>
+      <input matInput [matDatepicker]="dp2">
+      <mat-datepicker-toggle matSuffix [for]="dp2" disabled></mat-datepicker-toggle>
+      <mat-datepicker #dp2></mat-datepicker>
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field>
+      <mat-label>Input disabled</mat-label>
+      <input matInput [matDatepicker]="dp3" disabled>
+      <mat-datepicker-toggle matSuffix [for]="dp3"></mat-datepicker-toggle>
+      <mat-datepicker #dp3 disabled="false"></mat-datepicker>
+    </mat-form-field>
+  </p>
+  <mat-form-field>
+    <mat-label>Datepicker touch UI</mat-label>
+    <input matInput [matDatepicker]="touchPicker">
+    <mat-datepicker-toggle matSuffix [for]="touchPicker"></mat-datepicker-toggle>
+    <mat-datepicker touchUi #touchPicker></mat-datepicker>
+  </mat-form-field>
+    <mat-form-field class="example-full-width">
+    <input matInput [matDatepicker]="openPicker" placeholder="Choose a date">
+    <mat-datepicker #openPicker></mat-datepicker>
+  </mat-form-field>
+  <button mat-raised-button (click)="openPicker.open()">Open</button>
+  <mat-form-field>
+    <mat-label>Datepicker with custom date classes</mat-label>
+    <input matInput [matDatepicker]="highlightingPicker">
+    <mat-datepicker-toggle matSuffix [for]="highlightingPicker"></mat-datepicker-toggle>
+    <mat-datepicker [dateClass]="dateClass" #highlightingPicker></mat-datepicker>
+  </mat-form-field>
 </mat-dialog-content>
 <mat-dialog-actions align="end">
   <button mat-button mat-dialog-close>OK</button>

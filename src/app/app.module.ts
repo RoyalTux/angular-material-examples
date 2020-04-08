@@ -15,6 +15,7 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material-module';
 import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
+import { PrimeNgTableComponent } from './prime-ng-table/prime-ng-table.component';
 
 @NgModule({
   imports: [
@@ -34,7 +35,8 @@ import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
     ExpansionPanelComponent,
     TabsComponent,
     ChipsComponent,
-    ProgressBarComponent
+    ProgressBarComponent,
+    PrimeNgTableComponent
   ],
   bootstrap: [ AppComponent ],
   providers: [{ provide: MAT_FORM_FIELD_DEFAULT_OPTIONS,

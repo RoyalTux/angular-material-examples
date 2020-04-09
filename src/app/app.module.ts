@@ -15,8 +15,6 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material-module';
 import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
-import { PrimeNgTableComponent } from './prime-ng-table/prime-ng-table.component';
-import { CarService } from './prime-ng-table/car.service';
 
 @NgModule({
   imports: [
@@ -36,13 +34,11 @@ import { CarService } from './prime-ng-table/car.service';
     ExpansionPanelComponent,
     TabsComponent,
     ChipsComponent,
-    ProgressBarComponent,
-    PrimeNgTableComponent
+    ProgressBarComponent
   ],
   bootstrap: [ AppComponent ],
   providers: [{ provide: MAT_FORM_FIELD_DEFAULT_OPTIONS,
-   useValue: { appearance: 'fill' },
-   providers: [CarService]
+   useValue: { appearance: 'fill' }
    }],
   entryComponents: [
     DatePickerComponent,

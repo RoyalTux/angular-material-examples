@@ -16,6 +16,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material-module';
 import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
 import { PrimengTableComponent } from './primeng-table/primeng-table.component';
+import { PaginatorModule } from 'primeng/primeng'; // Here
+import { TableModule } from 'primeng/table';
 
 @NgModule({
   imports: [
@@ -26,6 +28,8 @@ import { PrimengTableComponent } from './primeng-table/primeng-table.component';
     MaterialModule,
     MatNativeDateModule,
     ReactiveFormsModule,
+    TableModule,
+    PaginatorModule
   ],
   declarations: [
     AppComponent,
